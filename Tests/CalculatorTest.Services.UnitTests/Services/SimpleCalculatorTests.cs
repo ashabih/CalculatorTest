@@ -37,7 +37,7 @@ namespace CalculatorTest.Services.UnitTests.Services
 
             // Assert
             result.Should().Be(expected);
-            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Add)} result: {result}"), Times.Once);
+            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Add)} result of numbers {start}, {amount}: {result}"), Times.Once);
         }
 
         [Theory]
@@ -72,7 +72,7 @@ namespace CalculatorTest.Services.UnitTests.Services
 
             // Assert
             result.Should().Be(expected);
-            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Subtract)} result: {result}"), Times.Once);
+            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Subtract)} result of numbers {start}, {amount}: {result}"), Times.Once);
         }
 
         [Theory]
@@ -105,7 +105,7 @@ namespace CalculatorTest.Services.UnitTests.Services
 
             // Assert
             result.Should().Be(expected);
-            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Multiply)} result: {result}"), Times.Once);
+            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Multiply)} result of numbers {start}, {by}: {result}"), Times.Once);
         }
 
         [Theory]
@@ -138,7 +138,7 @@ namespace CalculatorTest.Services.UnitTests.Services
 
             // Assert
             result.Should().Be(expected);
-            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Divide)} result: {result}"), Times.Once);
+            _mockDiagnostics.Verify(x => x.LogMessageAsync($"{nameof(_simpleCalculator.Divide)} result of numbers {start}, {by}: {result}"), Times.Once);
         }
 
         [Theory]
